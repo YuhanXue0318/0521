@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 定義表格資料
+        let tableData = [
+            ['姓名', '國文', '英文', '數學'],
+            ['王大同', 85, 88, 77],
+            ['林麥可', 99, 86, 89],
+            ['張淑芬', 75, 92, 86]
+        ];
+
+        // 生成表格
+        document.write('<table border="1">');
+        for (let i = 0; i < tableData.length; i++) {
+            document.write('<tr>');
+        for (let j = 0; j < tableData[i].length; j++) {
+            document.write('<td>' + tableData[i][j] + '</td>');
+        }
+        document.write('</tr>');
+        }
+        document.write('</table>');
+    </script>
+</body>
+</html>
