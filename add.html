@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let tableData = [];
+        let rows = 4, cols = 4;
+
+        // Initialize 2D array
+        for (let i = 0; i < rows; i++) {
+            tableData[i] = [];
+            for (let j = 0; j < cols; j++) {
+                tableData[i][j] = i * cols + j + 1; // Fill with sequential numbers
+            }
+        }
+
+        // Generate table
+        document.write("<table border='1'>");
+        for (let i = 0; i < rows; i++) {
+            document.write("<tr>");
+            for (let j = 0; j < cols; j++) {
+                if (i === 0 && j === 0) {
+                    document.write("<td>姓名</td>");
+                } else if (i === 0 && j === 1) {
+                    document.write("<td>國文</td>"); // Add 國文 to the first row, second cell
+                } else if (i === 0 && j === 2) {
+                    document.write("<td>英文</td>"); // Move 英文 to the first row, third cell
+                } else if (i === 0 && j === cols - 1) {
+                    document.write("<td>數學</td>"); // Add 數學 to the top-right cell
+                } else if (i === 1 && j === 0) {
+                    document.write("<td>王大同</td>");
+                } else if (i === 1 && j === 1) {
+                    document.write("<td>85</td>"); // Add 85 to the second row, second cell
+                } else if (i === 1 && j === 2) {
+                    document.write("<td>88</td>"); // Add 99 to the second row, third cell
+                } else if (i === 1 && j === 3) {
+                    document.write("<td>77</td>"); // Add 77 to the second row, fourth cell
+                } else if (i === 2 && j === 0) {
+                    document.write("<td>林麥可</td>");
+                } else if (i === 2 && j === 1) {
+                    document.write("<td>99</td>"); // Add 99 to the third row, second cell
+                } else if (i === 2 && j === 2) {
+                    document.write("<td>86</td>"); // Add 99 to the third row, third cell
+                } else if (i === 2 && j === 3) {
+                    document.write("<td>89</td>"); // Add 89 to the third row, fourth cell
+                } else if (i === 3 && j === 0) {
+                    document.write("<td>張淑芬</td>");
+                } else if (i === 3 && j === 1) {
+                    document.write("<td>75</td>"); // Add 75 to the fourth row, second cell
+                } else if (i === 3 && j === 2) {
+                    document.write("<td>92</td>"); // Add 75 to the fourth row, second cell
+                } else if (i === 3 && j === 3) {
+                    document.write("<td>86</td>"); // Add 75 to the fourth row, second cell
+                } else {
+                    document.write("<td>" + tableData[i][j] + "</td>");
+                }
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+    </script>
+</body>
+</html>
