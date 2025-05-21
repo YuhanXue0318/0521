@@ -17,23 +17,22 @@
         }
         document.write('</table>');
         document.write('<br>');
-        document.write('<h3>橫向排列</h3>');
+    </script>
+    
+    <h3>橫向排列</h3>
+    <script>
         let drinks2 = ['珍珠奶茶', '波霸奶茶', '無糖青茶', '麥香紅茶', '拿鐵', '白酒'];
         document.write('<table border="1">');
-        for (let i = 0; i < 2; i++) { 
-            document.write('<tr>');
-            for (let j = 0; j < 6; j++) {
-                let index = i * 7 + j;
-                if (i === 0) {
-                    document.write('<td>飲料' + (j + 1) + '</td>'); 
-                } else if (i === 1 && j < drinks.length) {
-                    document.write('<td>' + drinks[j] + '</td>'); 
-                } else {
-                    document.write('<td></td>'); 
-                }
-            }
-            document.write('</tr>');
+        document.write('<tr>'); 
+        for (let i = 0; i < drinks.length; i++) {
+            document.write('<td>飲料' + (i + 1) + '</td>');
         }
+        document.write('</tr>');
+        document.write('<tr>'); 
+        for (let i = 0; i < drinks.length; i++) {
+            document.write('<td>' + drinks[i] + '</td>');
+        }
+        document.write('</tr>');
         document.write('</table>');
     </script>
 </body>
